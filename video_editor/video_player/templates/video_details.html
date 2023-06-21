@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ video.title }}</h1>
+  <p>{{ video.description }}</p>
+  <img src="{{ video.thumbnail.url }}" alt="{{ video.title }} thumbnail">
+  <br>
+  <a href="{% url 'video_player:video_edit' video.pk %}">Edit</a>
+{% endblock %}
